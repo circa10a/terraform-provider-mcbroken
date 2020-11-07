@@ -17,7 +17,17 @@ Base the count of your infrastucture resources on the national average of broken
 
 ## Usage
 
-```terraform
+- View the provider on the [Hashicorp Registry](https://registry.terraform.io/providers/circa10a/mcbroken/latest/docs)
+
+```hcl
+terraform {
+  required_providers {
+    mcbroken = {
+      source  = "circa10a/mcbroken"
+    }
+  }
+}
+
 provider "mcbroken" {}
 
 // Data source to get all available cities/national average of broken ice cream machines

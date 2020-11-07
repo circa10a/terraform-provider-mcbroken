@@ -5,6 +5,14 @@ Base the count of your infrastucture resources on the national average of broken
 ## Example Usage
 
 ```hcl
+terraform {
+  required_providers {
+    mcbroken = {
+      source  = "circa10a/mcbroken"
+    }
+  }
+}
+
 provider "mcbroken" {}
 
 // Data resource to get all available cities/national average of broken ice cream machines

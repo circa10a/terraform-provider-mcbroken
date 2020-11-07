@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    mcbroken = {
+      source  = "local/provider/mcbroken"
+      version = "0.1.1"
+    }
+  }
+}
+
 provider "mcbroken" {}
 
 // Data resource to get all available cities/national average of broken ice cream machines
