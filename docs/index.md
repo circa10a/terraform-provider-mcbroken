@@ -1,6 +1,6 @@
 # Mcbroken Provider
 
-Base the count of your infrastucture resources on the national average of broken mcdonald's ice machines or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
+Base the count of your infrastucture resources on the current number of broken mcdonald's ice machines nationally or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
 
 ## Example Usage
 
