@@ -38,7 +38,7 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 			Summary:  "Unable to parse url",
 			Detail:   "Mcbroken endpoint provided is not a valid url",
 		})
-
+		return nil, diags
 	}
 
 	providerConfig["url"] = mcbrokenEndpoint
