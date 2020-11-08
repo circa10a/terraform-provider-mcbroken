@@ -5,7 +5,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/circa10a/terraform-provider-mcbroken?style=plastic)
 [![Buy Me A Coffee](https://img.shields.io/badge/BuyMeACoffee-Donate-ff813f.svg?logo=CoffeeScript&style=plastic)](https://www.buymeacoffee.com/caleblemoine)
 
-Base the count of your infrastucture resources on the national average of broken mcdonald's ice machines or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
+Base the count of your infrastucture resources on the current number of broken mcdonald's ice machines nationally or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
 
 - [terraform-provider-mcbroken](#terraform-provider-mcbroken)
   * [Usage](#usage)
