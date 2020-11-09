@@ -11,6 +11,7 @@ Base the count of your infrastucture resources on the current number of broken m
   * [Usage](#usage)
   * [Development](#development)
     + [Linting](#linting)
+    + [Testing](#testing)
     + [Mac](#mac)
     + [Linux](#linux)
     + [Windows](#windows)
@@ -136,6 +137,12 @@ output "user_specified_city_not_found" {
 
 ```bash
 make lint
+```
+
+### Testing
+
+```bash
+make test
 ```
 
 ### Mac

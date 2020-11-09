@@ -15,6 +15,10 @@ build-linux:
 	test -d $(PLUGIN_DIR) || mkdir -p $(PLUGIN_DIR)
 	go build -o $(PLUGIN_DIR)/$(PROVIDER_FULL_NAME)
 
+test: export TF_ACC=true
+test:
+	go test -v ./...
+
 lint:
 	@if ! command -v golangci-lint 1>/dev/null; then\
 		echo "Need to install golangci-lint";\
