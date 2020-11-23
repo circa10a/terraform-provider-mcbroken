@@ -10,7 +10,7 @@ import (
 )
 
 func TestAccMcbrokenCity(t *testing.T) {
-	brokenNumberRegex, _ := regexp.Compile(`\d{1,3}.\d{1,2}`)
+	brokenNumberRegex, _ := regexp.Compile(`\d{1,3}(.\d{1,2})?`)
 	resource.ParallelTest(t, resource.TestCase{
 		PreCheck:          func() { /* no precheck needed testAccPreCheck(t) */ },
 		ProviderFactories: testAccProviderFactories,
