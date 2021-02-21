@@ -8,8 +8,8 @@ import (
 )
 
 func TestAccMcbrokenCities(t *testing.T) {
-	brokenNumberRegex, _ := regexp.Compile(`\d{1,3}(.\d{1,2})?`)
-	cityRegex, _ := regexp.Compile(`[a-zA-Z]+$`)
+	brokenNumberRegex := regexp.MustCompile(`\d{1,3}(.\d{1,2})?`)
+	cityRegex := regexp.MustCompile(`[a-zA-Z]+$`)
 	resource.ParallelTest(t, resource.TestCase{
 		PreCheck:          func() { /* no precheck needed testAccPreCheck(t) */ },
 		ProviderFactories: testAccProviderFactories,

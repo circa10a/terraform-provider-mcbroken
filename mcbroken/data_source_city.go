@@ -30,7 +30,8 @@ func dataSourceCity() *schema.Resource {
 }
 
 func dataSourceCityRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
-	client := &http.Client{Timeout: 10 * time.Second}
+	var httpTimeout time.Duration = 10
+	client := &http.Client{Timeout: httpTimeout * time.Second}
 	providerConfig := m.(map[string]interface{})
 	url := providerConfig["url"].(string)
 	userChosenCity := d.Get("city").(string)
