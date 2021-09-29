@@ -1,6 +1,6 @@
 # Mcbroken Provider
 
-Base the count of your infrastucture resources on the current number of broken mcdonald's ice machines nationally or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
+Base the count of your infrastructure resources on the current number of broken mcdonald's ice cream machines nationally or by a city of your choosing. Powered by [Mcbroken](https://mcbroken.com/).
 
 ## Example Usage
 
@@ -52,3 +52,13 @@ output "user_specified_city_not_found" {
 ## Argument Reference
 
 * `url` - Mcbroken JSON endpoint
+
+
+## FAQ
+
+### Is this based on ice cream machines or ice machines? What is the difference?
+
+This is based on ice cream machines, not ice machines.
+Ice machines produce ice for drinks, while ice cream machines produce frozen milk product based treats.
+
+Please don't use this project to rely on _ice machines_ or your results will be incorrect.

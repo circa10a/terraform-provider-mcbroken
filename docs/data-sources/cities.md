@@ -24,5 +24,5 @@ None
 
 ## Attribute Reference
 
-* `cities` - List of maps that contains cities and their broken ice machine average
+* `cities` - List of maps that contains cities and their broken ice cream machine average
 * `broken` - National average of broken ice cream machines
