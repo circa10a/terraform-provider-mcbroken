@@ -2,6 +2,8 @@ package mcbroken
 
 import (
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
@@ -32,4 +34,9 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 	providerConfig := make(map[string]interface{})
 	providerConfig["url"] = d.Get("url").(string)
 	return providerConfig, diags
+}
+
+func hashCityString(s string) string {
+	hash := sha256.Sum256([]byte(s))
+	return hex.EncodeToString(hash[:])
 }

@@ -167,7 +167,6 @@ terraform apply
 
 ![alt text](https://media.giphy.com/media/4cuyucPeVWbNS/giphy.gif)
 
-
 ## FAQ
 
 ### Is this based on ice cream machines or ice machines? What is the difference?

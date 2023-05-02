@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -71,19 +70,22 @@ func dataSourceCitiesRead(ctx context.Context, d *schema.ResourceData, m interfa
 	}
 
 	cities := make([]map[string]interface{}, 0)
+	// For computing hash for id
+	citiesStr := ""
 	// Set broken values for all currently available city data
 	for _, v := range brokenCities.Cities {
 		city := make(map[string]interface{})
 		city["city"] = v.City
 		city["broken"] = v.Broken
 		cities = append(cities, city)
+		// For computing hash for id
+		citiesStr += v.City
 	}
 	if err := d.Set("cities", cities); err != nil {
 		return diag.FromErr(err)
 	}
 
-	// Change ID every run to force update
-	d.SetId(strconv.FormatInt(time.Now().Unix(), 10))
+	d.SetId(hashCityString(citiesStr))
 
 	return diags
 }
