@@ -3,9 +3,7 @@ package mcbroken
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"net/http"
-	"strconv"
 	"strings"
 	"time"
 
@@ -71,8 +69,7 @@ func dataSourceCityRead(ctx context.Context, d *schema.ResourceData, m interface
 		}
 	}
 
-	// Change ID every run to force update
-	d.SetId(fmt.Sprintf("%v-%v", userChosenCity, strconv.FormatInt(time.Now().Unix(), 10)))
+	d.SetId(hashCityString(userChosenCity))
 
 	return diags
 }

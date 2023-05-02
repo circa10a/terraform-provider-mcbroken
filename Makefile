@@ -3,7 +3,7 @@ PROVIDER_NAME=mcbroken
 PROVIDER_FULL_PATH=$(REGISTRY)/$(NAMESPACE)/$(PROVIDER_NAME)
 PROVIDER_FULL_NAME=terraform-provider-$(PROVIDER_NAME)
 PROJECT=$(NAMESPACE)/$(PROVIDER_FULL_NAME)
-VERSION=0.1.3
+VERSION=$(shell git describe --abbrev=0 --tags | sed 's/v//')
 
 build-mac: PLUGIN_DIR = ~/.terraform.d/plugins/local/provider/$(PROVIDER_NAME)/$(VERSION)/darwin_amd64
 build-mac:

@@ -2,3 +2,4 @@
 *tfstate*
 terraform-provider-mcbroken
 *.log
+.terraform.lock.hcl
