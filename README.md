@@ -1,4 +1,4 @@
-# terraform-provider-mcbroken <img src="https://i.imgur.com/fAS7XqO.png" height="5%" width="5%" align="left"/>
+# terraform-provider-mcbroken <img src="https://i.imgur.com/fAS7XqO.png" width="5%" align="left"/>
 
 ![Build Status](https://github.com/circa10a/terraform-provider-mcbroken/workflows/release/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/circa10a/terraform-provider-mcbroken)](https://goreportcard.com/report/github.com/circa10a/terraform-provider-mcbroken)
